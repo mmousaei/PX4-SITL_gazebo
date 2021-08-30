@@ -38,11 +38,11 @@
         </surface>
       </collision>
       <visual name='base_link_visual'>
-        <pose>0.53 -1.072 -0.13 1.5707963268 0 3.1415926536</pose>
+        <pose>0 0 -0.13 0 0 -1.570796327</pose>
         <geometry>
           <mesh>
-            <scale>0.001 0.001 0.001</scale>
-            <uri>model://needle/meshes/needle.stl</uri>
+            <scale>0.002 0.002 0.002</scale>
+            <uri>model://needle/meshes/Fuselage.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -99,7 +99,7 @@
       <parent>base_link</parent>
     </joint>
     <link name='motor_0'>
-      <pose>0.35 -0.35 0.02 0 0 0</pose>
+      <pose>0.55 -0.55 -0.1 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.05</mass>
@@ -129,6 +129,21 @@
           </friction>
         </surface>
       </collision>
+      <visual name='motor_0_visual'>
+        <pose>0 0 0 0.0 0 -1.570796327</pose>
+        <geometry>
+          <mesh>
+            <scale>0.002 0.002 0.002</scale>
+            <uri>model://needle/meshes/MotorMount.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <gravity>1</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
@@ -154,7 +169,7 @@
 
 
     <link name='rotor_0'>
-      <pose>0.46 -0.35 0.07 0 0 0</pose>
+      <pose>0.55 -0.55 0 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -171,7 +186,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.005</length>
+            <length>0.01</length>
             <radius>0.1</radius>
           </cylinder>
         </geometry>
@@ -188,7 +203,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>2 2 2</scale>
             <uri>model://tiltrotor/meshes/iris_prop_ccw.dae</uri>
           </mesh>
         </geometry>
@@ -222,7 +237,7 @@
 
 
     <link name='motor_1'>
-      <pose>-0.35 0.35 0.02 0 0 0</pose>
+      <pose>-0.55 0.55 -0.1 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.05</mass>
@@ -252,6 +267,21 @@
           </friction>
         </surface>
       </collision>
+      <visual name='motor_1_visual'>
+        <pose>0 0 0 0.0 0 -1.570796327</pose>
+        <geometry>
+          <mesh>
+            <scale>0.002 0.002 0.002</scale>
+            <uri>model://needle/meshes/MotorMount.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <gravity>1</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
@@ -276,7 +306,7 @@
     </joint>
 
     <link name='rotor_1'>
-      <pose>-0.53 0.35 0.07 0 0 0</pose>
+      <pose>-0.55 0.55 0 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -293,7 +323,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.005</length>
+            <length>0.01</length>
             <radius>0.1</radius>
           </cylinder>
         </geometry>
@@ -310,7 +340,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>2 2 2</scale>
             <uri>model://tiltrotor/meshes/iris_prop_ccw.dae</uri>
           </mesh>
         </geometry>
@@ -345,7 +375,7 @@
 
 
     <link name='motor_2'>
-      <pose>0.35 0.35 0.02 0 0 0</pose>
+      <pose>0.55 0.55 -0.1 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.05</mass>
@@ -375,6 +405,21 @@
           </friction>
         </surface>
       </collision>
+      <visual name='motor_2_visual'>
+        <pose>0 0 0 0.0 0 -1.570796327</pose>
+        <geometry>
+          <mesh>
+            <scale>0.002 0.002 0.002</scale>
+            <uri>model://needle/meshes/MotorMount.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <gravity>1</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
@@ -400,7 +445,7 @@
 
 
     <link name='rotor_2'>
-      <pose>0.46 0.35 0.07 0 0 0</pose>
+      <pose>0.55 0.55 0 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -417,7 +462,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.005</length>
+            <length>0.01</length>
             <radius>0.1</radius>
           </cylinder>
         </geometry>
@@ -434,7 +479,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>2 2 2</scale>
             <uri>model://tiltrotor/meshes/iris_prop_ccw.dae</uri>
           </mesh>
         </geometry>
@@ -467,7 +512,7 @@
     </joint>
 
 <link name='motor_3'>
-       <pose>-0.35 -0.35 0.02 0 0 0</pose>
+       <pose>-0.55 -0.55 -0.1 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.05</mass>
@@ -497,6 +542,21 @@
           </friction>
         </surface>
       </collision>
+      <visual name='motor_3_visual'>
+        <pose>0 0 0 0.0 0 -1.570796327</pose>
+        <geometry>
+          <mesh>
+            <scale>0.002 0.002 0.002</scale>
+            <uri>model://needle/meshes/MotorMount.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/DarkGrey</name>
+            <uri>__default__</uri>
+          </script>
+        </material>
+      </visual>
       <gravity>1</gravity>
       <velocity_decay/>
       <self_collide>0</self_collide>
@@ -522,7 +582,7 @@
 
 
     <link name='rotor_3'>
-      <pose>-0.53 -0.35 0.07 0 0 0</pose>
+      <pose>-0.55 -0.55 0 0 0 0</pose>
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>0.005</mass>
@@ -539,7 +599,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <cylinder>
-            <length>0.005</length>
+            <length>0.01</length>
             <radius>0.1</radius>
           </cylinder>
         </geometry>
@@ -556,7 +616,7 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
+            <scale>2 2 2</scale>
             <uri>model://tiltrotor/meshes/iris_prop_ccw.dae</uri>
           </mesh>
         </geometry>
@@ -602,10 +662,10 @@
         <pose>0 0.3 0 0.00 0 0.0</pose>
       </inertial>
       <visual name='left_elevon_visual'>
-        <pose>-0.15 0.8 0 0 0 0</pose>
+        <pose>-0.16 1.2 -0.1 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 0.5 0.01</size>
+            <size>0.1 0.8 0.01</size>
           </box>
         </geometry>
         <material>
@@ -630,10 +690,10 @@
         <pose>0 -0.6 0 0.00 0 0.0</pose>
       </inertial>
       <visual name='right_elevon_visual'>
-        <pose>-0.15 -0.8 0 0 0 0</pose>
+        <pose>-0.16 -1.2 -0.1 0 0 0</pose>
         <geometry>
           <box>
-            <size>0.1 0.5 0.01</size>
+            <size>0.1 0.8 0.01</size>
           </box>
         </geometry>
         <material>
@@ -658,7 +718,7 @@
         <pose> -0.8 0 0 0.00 0 0.0</pose>
       </inertial>
       <visual name='elevator_visual'>
-          <pose>-0.8 0.03 -0.008 0 0 0</pose>
+          <pose>-1 0 -0.1 0 0 0</pose>
           <geometry>
             <box>
               <size>0.06 0.6 0.01</size>
@@ -686,7 +746,7 @@
         <pose>-0.8 0 0.05 0 0 0 </pose>
       </inertial>
       <visual name='rudder_visual'>
-        <pose>-0.84 0.03 0.15 1.5708 0 0</pose>
+        <pose>-1 0 0.07 1.5708 0 0</pose>
         <geometry>
           <box>
             <size>0.06 0.15 0.01</size>
@@ -703,7 +763,7 @@
     <joint name='left_elevon_joint' type='revolute'>
       <parent>base_link</parent>
       <child>left_elevon</child>
-      <pose>-0.18 0.6 -0.005 0 0 0.265</pose>
+      <pose>-0.16 1.2 -0.1 0 0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -724,7 +784,7 @@
     <joint name='right_elevon_joint' type='revolute'>
       <parent>base_link</parent>
       <child>right_elevon</child>
-      <pose>-0.18 -0.6 -0.005 0 0 -0.265</pose>
+      <pose>-0.16 -1.2 -0.1 0 0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -745,7 +805,7 @@
     <joint name='elevator_joint' type='revolute'>
       <parent>base_link</parent>
       <child>elevator</child>
-      <pose> -0.5 0 0 0 0 0</pose>
+      <pose> -1 0 -0.1 0 0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
         <limit>
@@ -766,7 +826,7 @@
     <joint name='rudder_joint' type='revolute'>
       <parent>base_link</parent>
       <child>rudder</child>
-      <pose>-0.5 0 0.05 0.00 0 0.0</pose>
+      <pose>-1 0 0.07 0 1.5708 0</pose>
       <axis>
         <xyz>1 0 0</xyz>
         <limit>
